@@ -38,3 +38,16 @@ y hacemos lo mismo con el contenedor de nuestra aplicacion
 que acabamos de crear
 
 El siguiente paso es crear un docker-compose.yml 
+
+
+
+
+--------------------DESARROLLO-------------------
+Para el ambiente de desarrollo se tienen
+dockerfiles y docker-compose.yml distintos a los
+de produccion 
+
+para usar un docker-compose.yml distinto al por 
+defecto (docker-compose.yml) se usa el parametro
+-f en el docker-compose especificando la ruta del 
+archivo

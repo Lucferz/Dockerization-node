@@ -1,0 +1,14 @@
+FROM node:18
+
+# Esta configuracion es para ambiente de desarrollo
+# con esta configuracion podremos hacer hot reload del
+# proyecto mientras esta en el docker
+RUN npm -i -g nodemon
+RUN mkdir -p /home/app
+
+# Esto solo se usa en desarrollo
+WORKDIR /home/app
+
+EXPOSE 3000
+
+CMD ["nodemon", "index.js"]

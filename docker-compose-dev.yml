@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  mi_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3002:3000"
+    links:
+      - mongodb
+    volumes:
+      - .:/home/app
+  mongodb:
+    image: mongo
+    ports:
+      -  "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin 
+      - MONGO_INITDB_ROOT_PASSWORD=admin 
+      - MONGO_INITDB_DATABASE=prueba_docker
+    volumes:
+      - mongo_data:/data/db
+      # mysql -> /var/lib/mysql
+      # postgres -> /var/lib/postgresql/data
+volumes:
+  mongo_data:
