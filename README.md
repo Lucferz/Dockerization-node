@@ -6,7 +6,11 @@ Levantando la aplicacion js (node):
         npm install 
         node index.js
 Creando la imagen de mongo
+    -- Windows
     docker run --name mongodb -v D:\docker_volumes\mongodb:/data/db -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin -e MONGO_INITDB_DATABASE=prueba_docker -p 27017:27017 -d mongo
+
+    --Linux
+    docker run --name mongodb -v /home/lucferz/containers-data/mongodb/:/data/db -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin -e MONGO_INITDB_DATABASE=prueba_docker -p 27017:27017 -d mongo
 Luego de configurar bien el string de conexion de mongo ya saldra el contenido en el navegador
 
 ----------------DOCKERIZANDO-------------------
