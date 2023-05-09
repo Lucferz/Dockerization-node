@@ -20,7 +20,7 @@ vez dentro del docker las aplicaciones se conectan mediante
 redes, se pueden crear propias o dejar por defecto las que 
 crea el docker.
 
-crear una red con docker network create unared
+crear una red con docker network:  create unared
 
 Una vez dentro del docker las aplicaciones dentro de la misma
 red se reconocen por el nombre de sus contenedores, por ende

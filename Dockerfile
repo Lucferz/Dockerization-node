@@ -11,6 +11,11 @@ COPY . /home/app
 #exponemos el puerto en el que la aplicacion va a estar funcionando
 EXPOSE 3000
 
+#WORKDIR /home/app #Establece el directorio de trabajo
+
+#RUN npm install # Ejecuta comandos extras necesarios
+
+
 # se usa para ejecutar comandos dentro del docker y funciona colocando
 # dentro de un array el comando y sus argumentos, en item separados
 # siempre es bueno utilizar rutas absolutas a la hora de ejecutar
